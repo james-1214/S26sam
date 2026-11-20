@@ -1,3 +1,4 @@
+
 {
   "name": "brand-phone-experience",
   "private": true,
@@ -9,7 +10,9 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "check:explode": "tsx scripts/check-explode.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
@@ -26,6 +29,7 @@
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.187.0",
     "@vitejs/plugin-react": "^6.3.0",
+    "gh-pages": "^6.3.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.3.8",
